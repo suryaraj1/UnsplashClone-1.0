@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .photo-list-grid {
   width: 1200px;
   margin: 20px auto;
-  columns: 4;
+  columns: 3;
   column-gap: 40px;
 }
