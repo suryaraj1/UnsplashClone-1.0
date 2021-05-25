@@ -1,0 +1,82 @@
+.photo-submit-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.photo-submit-wrapper {
+  height: 375px;
+  width: 620px;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.photo-submit-header-wrapper {
+  width: 550px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.photo-submit-header {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.photo-submit-input-label {
+  color: #333333;
+}
+
+.photo-submit-input {
+  height: 55px;
+  width: 550px;
+  border-radius: 12px;
+  padding: 6px 12px;
+  outline: none;
+  border: 1px solid #4f4f4f;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px 0 20px 0;
+  transition: 0.35s;
+}
+
+.photo-submit-input:focus {
+  border: 1px solid #3db46d;
+}
+
+.photo-submit-btn-wrapper {
+  display: flex;
+  width: 550px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.photo-submit-btn {
+  height: 55px;
+  width: 105px;
+  background: #3db46d;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.35s;
+}
+
+.cancel {
+  background: #fff;
+  color: #bdbdbd;
+  box-shadow: none;
+}
+
+.submit:active {
+  transform: scale(0.96);
+}
