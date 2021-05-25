@@ -1,4 +1,5 @@
 import React from "react";
+import "./PhotoCard.css";
 
 class PhotoCard extends React.Component {
   render() {
