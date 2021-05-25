@@ -1,0 +1,78 @@
+.photo-delete-form-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.photo-delete-wrapper {
+  height: 270px;
+  width: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-delete-header-wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.photo-delete-header {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.photo-delete-input-label {
+  color: #4f4f4f;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.photo-delete-input {
+  height: 55px;
+  width: 550px;
+  border-radius: 12px;
+  outline: none;
+  padding: 6px 12px;
+  transition: 0.3s;
+  border: 1px solid #4f4f4f;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-delete-input:focus {
+  border: 1px solid #eb5757;
+}
+
+.photo-delete-btn-wrapper {
+  display: flex;
+  width: 90%;
+  margin-top: 30px;
+  justify-content: flex-end;
+}
+
+.photo-delete-btn {
+  height: 55px;
+  width: 105px;
+  background: #eb5757;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.35s;
+}
+
+.cancel {
+  background: #ffffff;
+  box-shadow: none;
+  color: #bdbdbd;
+}
