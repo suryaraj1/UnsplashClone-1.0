@@ -1,5 +1,6 @@
 import React from "react";
 import "./PhotoForm.css";
+import axios from "axios";
 import ReactModal from "react-modal";
 
 class PhotoForm extends React.Component {
@@ -10,6 +11,31 @@ class PhotoForm extends React.Component {
       label: "",
     };
   }
+
+  onUrlChange = event => {
+    this.setState({
+      url: event.target.value,
+    });
+  };
+
+  onLabelChange = event => {
+    this.setState({
+      label: event.target.value,
+    });
+  };
+
+  onSubmithandler = event => {
+    event.preventDefault();
+    const { url, label } = this.state;
+    axios
+      .post("/api/photos", {
+        label,
+        url,
+      })
+      .then(response => console.log(response))
+      .catch(err => console.log(err));
+  };
+
   render() {
     const { showModal } = this.props;
     return (
@@ -23,7 +49,8 @@ class PhotoForm extends React.Component {
             <div className="photo-submit-input-wrapper">
               <p className="photo-submit-input-label">Label</p>
               <input
-                type="input"
+                spellCheck={false}
+                onChange={this.onLabelChange}
                 className="photo-submit-input"
                 placeholder="Suspendisse elit massa"
               />
@@ -32,7 +59,8 @@ class PhotoForm extends React.Component {
             <div className="photo-submit-input-wrapper">
               <p className="photo-submit-input-label">Photo URL</p>
               <input
-                type="input"
+                spellCheck={false}
+                onChange={this.onUrlChange}
                 className="photo-submit-input"
                 placeholder="https://images.unsplash.com/photo-1584395630827-860eee694d7b?ixlib=r..."
               />
@@ -40,7 +68,11 @@ class PhotoForm extends React.Component {
 
             <div className="photo-submit-btn-wrapper">
               <button className="photo-submit-btn cancel">Cancel</button>
-              <button className="photo-submit-btn submit" type="submit">
+              <button
+                onClick={this.onSubmithandler}
+                className="photo-submit-btn submit"
+                type="submit"
+              >
                 Submit
               </button>
             </div>
