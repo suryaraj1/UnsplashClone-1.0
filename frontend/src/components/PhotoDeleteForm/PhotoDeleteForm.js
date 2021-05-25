@@ -1,8 +1,32 @@
 import React from "react";
+import axios from "axios";
 import ReactModal from "react-modal";
 import "./PhotoDeleteForm.css";
 
 class PhotoDeleteForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      password: "",
+    };
+  }
+
+  onInputHandler = event => {
+    this.setState({
+      password: event.target.value,
+    });
+  };
+
+  onDeleteHandler = event => {
+    event.preventDefault();
+    const { password } = this.state;
+    const label = password;
+    axios
+      .delete(`/api/photos/${label}`)
+      .then(() => (window.location = "/"))
+      .catch(err => console.log(err));
+  };
+
   render() {
     const { showModal } = this.props;
     return (
@@ -15,6 +39,7 @@ class PhotoDeleteForm extends React.Component {
             <div className="photo-delete-input-wrapper">
               <p className="photo-delete-input-label">Password</p>
               <input
+                onChange={this.onInputHandler}
                 placeholder="*******************"
                 className="photo-delete-input"
               />
@@ -23,7 +48,11 @@ class PhotoDeleteForm extends React.Component {
               <button type="submit" className="photo-delete-btn cancel">
                 Cancel
               </button>
-              <button type="submit" className="photo-delete-btn submit">
+              <button
+                onClick={this.onDeleteHandler}
+                type="submit"
+                className="photo-delete-btn submit"
+              >
                 Delete
               </button>
             </div>

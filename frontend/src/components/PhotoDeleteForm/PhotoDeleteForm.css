@@ -9,6 +9,7 @@
   height: 270px;
   width: 620px;
   display: flex;
+  background: #ffffff;
   justify-content: center;
   align-items: center;
   flex-direction: column;
