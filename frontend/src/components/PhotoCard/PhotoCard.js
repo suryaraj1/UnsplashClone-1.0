@@ -6,7 +6,7 @@ class PhotoCard extends React.Component {
     const { label, url } = this.props;
     return (
       <div className="photo-card-wrapper">
-        <img src={url} className="photo-card-img"></img>
+        <img src={url} className="photo-card-img" />
       </div>
     );
   }

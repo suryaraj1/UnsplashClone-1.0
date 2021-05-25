@@ -32,7 +32,9 @@ class PhotoForm extends React.Component {
         label,
         url,
       })
-      .then(response => console.log(response))
+      .then(response => {
+        window.location = "/";
+      })
       .catch(err => console.log(err));
   };
 

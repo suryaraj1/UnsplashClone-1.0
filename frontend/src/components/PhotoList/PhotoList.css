@@ -1,0 +1,12 @@
+.photo-list-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+.photo-list-grid {
+  column-count: 3;
+  column-gap: 10px;
+}
