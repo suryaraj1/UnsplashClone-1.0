@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.photo-card-wrapper {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px;
+  break-inside: avoid;
+}
+
 .photo-card-img {
-  max-width: 80%;
-  border-radius: 16px;
-  margin: 20px;
+  transition: 0.35s;
+  border-radius: 10px;
+  max-width: 100%;
   cursor: pointer;
-  transition: 0.4s;
 }
 
 .photo-card-img:hover {
