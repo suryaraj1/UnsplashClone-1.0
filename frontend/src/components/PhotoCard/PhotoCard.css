@@ -3,18 +3,65 @@
 .photo-card-wrapper {
   width: 100%;
   margin: 0 0 20px;
-  padding: 10px;
   break-inside: avoid;
+  position: relative;
 }
 
 .photo-card-img {
   transition: 0.35s;
-  border-radius: 10px;
+  border-radius: 16px;
   max-width: 100%;
+  cursor: pointer;
+  width: 100%;
+}
+
+.photo-card-overlay {
+  background: rgb(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99.2%;
+  padding: 20px;
+  border-radius: 16px;
+  color: #ffffff;
+  display: flex;
+  opacity: 0;
+  transition: 0.35s;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo-card-overlay-text {
+  font-family: "Montserrat", "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.photo-card-overlay-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.photo-card-overlay-btn {
+  height: 27px;
+  width: 70px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid #eb5757;
+  background: transparent;
+  color: #eb5757;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.25s;
   cursor: pointer;
 }
 
-.photo-card-img:hover {
-  box-shadow: 0 20px 30px -11px rgb(31 35 65 / 37%);
-  transform: translate(0px, -5px);
+.photo-card-overlay-btn:hover {
+  background: #eb5757;
+  color: #ffffff;
+}
+
+.photo-card-overlay:hover {
+  opacity: 1;
 }

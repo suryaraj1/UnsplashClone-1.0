@@ -8,6 +8,6 @@
 .photo-list-grid {
   width: 1200px;
   margin: 20px auto;
-  columns: 3;
+  columns: 4;
   column-gap: 40px;
 }
