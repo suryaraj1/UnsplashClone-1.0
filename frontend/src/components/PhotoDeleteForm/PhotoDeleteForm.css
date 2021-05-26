@@ -48,6 +48,7 @@
 
 .photo-delete-input:focus {
   border: 1px solid #eb5757;
+  box-shadow: 0 0 0 0.125em rgb(50 152 220 / 25%);
 }
 
 .photo-delete-btn-wrapper {

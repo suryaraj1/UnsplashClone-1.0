@@ -47,6 +47,7 @@
 
 .photo-submit-input:focus {
   border: 1px solid #3db46d;
+  box-shadow: 0 0 0 0.125em rgb(50 152 220 / 25%);
 }
 
 .photo-submit-btn-wrapper {

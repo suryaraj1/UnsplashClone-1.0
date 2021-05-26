@@ -10,7 +10,9 @@ class PhotoList extends React.Component {
         <div className="photo-list-grid">
           {photos.map(photo => {
             const { photoUrl, photoLabel } = photo;
-            return <PhotoCard url={photoUrl} label={photoLabel} />;
+            return (
+              <PhotoCard key={photoLabel} url={photoUrl} label={photoLabel} />
+            );
           })}
         </div>
       </div>

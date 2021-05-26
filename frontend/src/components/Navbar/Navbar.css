@@ -21,6 +21,7 @@
   align-items: center;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
+  transition: 0.3s ease;
 }
 
 .navbar-logo-search-wrapper svg {
@@ -36,6 +37,11 @@
   font-weight: 500;
   position: relative;
   right: 10px;
+}
+
+.navbar-search-wrapper:focus-within {
+  border: 1px solid #3db46d;
+  box-shadow: 0 0 0 0.125em rgb(50 152 220 / 25%);
 }
 
 .navbar-btn {
@@ -56,4 +62,34 @@
 .navbar-btn:hover {
   box-shadow: 0 20px 30px -11px rgb(31 35 65 / 37%);
   transform: translate(0px, -5px);
+}
+
+@media screen and (max-width: 500px) {
+  .navbar-wrapper {
+    width: 100%;
+    padding: 10px 10px;
+  }
+
+  .navbar-img {
+    height: 20px;
+  }
+
+  .navbar-search-wrapper {
+    width: 140px;
+    height: 40px;
+    position: relative;
+    right: 15px;
+  }
+
+  .navbar-search {
+    width: 80px;
+    font-size: 10px;
+  }
+
+  .navbar-btn {
+    height: 30px;
+    width: 70px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
 }
