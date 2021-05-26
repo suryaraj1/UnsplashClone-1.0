@@ -81,3 +81,29 @@
 .submit:active {
   transform: scale(0.96);
 }
+
+@media screen and (max-width: 500px) {
+  .photo-submit-wrapper {
+    width: 80%;
+  }
+
+  .photo-submit-header-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .photo-submit-input {
+    width: 100%;
+  }
+
+  .photo-submit-btn-wrapper {
+    width: 100%;
+    padding: 10px 10px;
+  }
+
+  .photo-submit-btn {
+    width: 30%;
+    height: 40px;
+    font-size: 14px;
+  }
+}
