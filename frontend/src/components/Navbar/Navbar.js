@@ -19,9 +19,17 @@ class Navbar extends React.Component {
   };
 
   updateSearch = event => {
+    const { search } = this.state;
     this.setState({
       search: event.target.value,
     });
+    console.log(search);
+    const { photos, updatePhotos } = this.props;
+    const filteredPhotos = photos.filter(photo => {
+      const { search } = this.state;
+      return photo.photoLabel.toLowerCase().indexOf(search) !== -1;
+    });
+    updatePhotos(search.length > 1 ? filteredPhotos : photos);
   };
 
   render() {

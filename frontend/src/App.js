@@ -8,8 +8,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       photos: [],
+      filterPhotos: [],
     };
   }
+
+  updatePhotos = filteredPhotos => {
+    this.setState({
+      filterPhotos: filteredPhotos,
+    });
+  };
 
   componentDidMount() {
     axios
@@ -17,17 +24,18 @@ class App extends React.Component {
       .then(response => {
         this.setState({
           photos: response.data,
+          filterPhotos: response.data,
         });
       })
       .catch(err => console.log(err));
   }
 
   render() {
-    const { photos } = this.state;
+    const { photos, filterPhotos } = this.state;
     return (
       <div className="App">
-        <Navbar />
-        <PhotoList photos={photos} />
+        <Navbar photos={photos} updatePhotos={this.updatePhotos} />
+        <PhotoList photos={filterPhotos} />
       </div>
     );
   }
