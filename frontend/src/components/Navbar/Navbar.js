@@ -8,6 +8,7 @@ class Navbar extends React.Component {
     super(props);
     this.state = {
       showModal: false,
+      search: "",
     };
   }
 
@@ -17,8 +18,14 @@ class Navbar extends React.Component {
     });
   };
 
+  updateSearch = event => {
+    this.setState({
+      search: event.target.value,
+    });
+  };
+
   render() {
-    const { showModal } = this.state;
+    const { showModal, search } = this.state;
     return (
       <div className="navbar-wrapper">
         <div className="navbar-logo-search-wrapper">
@@ -42,6 +49,8 @@ class Navbar extends React.Component {
             <input
               className="navbar-search"
               type="input"
+              value={search}
+              onChange={this.updateSearch}
               placeholder="Search by name"
             />
           </div>
